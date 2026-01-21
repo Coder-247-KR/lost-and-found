@@ -13,13 +13,15 @@ export default function FoundForm() {
   };
 
   return (
-    <div className="container">
+    <div className="page found-bg">
       <h2>Found Item Form</h2>
-      <input placeholder="Name" onChange={e => setForm({ ...form, name: e.target.value })} />
-      <input placeholder="Contact" onChange={e => setForm({ ...form, contact: e.target.value })} />
-      <input placeholder="Item" onChange={e => setForm({ ...form, item: e.target.value })} />
+
+      <input placeholder="Your Name" onChange={e => setForm({ ...form, name: e.target.value })} />
+      <input placeholder="Contact Number" onChange={e => setForm({ ...form, contact: e.target.value })} />
+      <input placeholder="Item Name" onChange={e => setForm({ ...form, item: e.target.value })} />
       <textarea placeholder="Description" onChange={e => setForm({ ...form, desc: e.target.value })}></textarea>
-      <button onClick={submit}>Submit</button>
+
+      <button className="found-btn" onClick={submit}>Submit Found Item</button>
     </div>
   );
 }

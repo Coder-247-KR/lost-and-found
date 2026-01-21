@@ -98,8 +98,9 @@
 
 
 
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+
 import Home from "./Home";
 import LostForm from "./LostForm";
 import FoundForm from "./FoundForm";
@@ -108,6 +109,12 @@ import FoundList from "./FoundList";
 import "./App.css";
 
 function App() {
+
+  // clears all stored data on every reload
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>
@@ -122,5 +129,4 @@ function App() {
 }
 
 export default App;
-
 
